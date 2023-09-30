@@ -1,0 +1,580 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk");
+
+:root {
+  --header-height: 3.5rem;
+  --first-color: hsl(38, 69%, 59%);
+  --text-color: hsl(38, 8%, 8%);
+  --body-font: "Space Grotesk", sans-serif;
+  --biggest-font-size: 1.5rem;
+  --normal-font-size: 0.938rem;
+  --smaller-font-size: 0.75rem;
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 3.5rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: 0.813rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: 500;
+  color: var(--text-color);
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+.nav__logo,
+.nav__toggle {
+  color: var(--text-color);
+  display: inline-flex;
+  position: relative; 
+  left: -20px; 
+}
+
+.nav__logo {
+  font-weight: 700;
+}
+
+/* Estilos para la barra de navegación */
+.top-bar {
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px 0;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-bar nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.top-bar nav ul li {
+  margin: 0 10px;
+  padding: 0;
+}
+
+.top-bar button {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.top-bar button:hover {
+  background-color: #1d1ae7;
+  color: white;
+  transform: scale(1.05);
+}
+
+.login-button {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 30px;
+  padding: 10px 20px;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.login-button:hover {
+  background-color: #00bcd4;
+  color: white;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ... (estilos específicos para la sección de inicio) ... */
+
+.home {
+  position: relative;
+  min-height: 100vh;
+  background: url(https://us.123rf.com/450wm/viperagp/viperagp1707/viperagp170700073/82066961-conjunto-de-electrodom%C3%A9sticos-en-un-tel%C3%A9fono-inteligente-fondo-blanco-3d-ilustraci%C3%B3n.jpg?ver=6)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.home__container {
+  max-width: 40%;
+  margin-top: 50px;
+  text-align: center;
+  padding: 2rem;
+}
+
+.home__data {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.home__data .home__description {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+  line-height: 2.7rem;
+}
+
+.home__description span {
+  color: #1d1ae7;
+}
+
+.home__data p {
+  font-size: 1.5rem;
+}
+
+.home__button {
+  margin-top: 2rem;
+  display: inline-block;
+  background-color: #1d1ae7;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 3rem;
+  transition: 0.4s;
+}
+
+.home__button:hover {
+  box-shadow: 0 4px 12px hsla(38, 69%, 8%, 0.2);
+}
+
+.home__footer {
+  display: flex;
+  justify-content: center;
+  column-gap: 0.5rem;
+  font-size: var(--smaller-font-size);
+  align-self: flex-end;
+}
+
+@media (max-width: 606px) {
+  .home__container {
+    position: static;
+    max-width: 100%;
+  }
+  .home__data .home__description {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 2.5rem;
+  }
+  .home__data p {
+    font-size: 1rem;
+  }
+  .home {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* ... (estilos específicos para la sección de nosotros) ... */
+
+.nosotros {
+  margin: 5em 0;
+}
+
+.nosotros h1 {
+  font-size: var(--biggest-font-size);
+  text-align: center;
+  color: #1d1ae7;
+}
+.nosotros h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.nosotros-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2em;
+}
+
+.nosotros-card img {
+  width: 150px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+.nosotros-card {
+  width: 400px;
+  margin: 10px;
+  padding: 20px;
+  border: 5px;
+  border-radius: 30px;
+  box-shadow: 0 2px 5px #aba0a0;
+  text-align: center;
+  background-color: #5553ee;
+}
+
+@media (max-width: 768px) {
+  .nosotros-card {
+    width: 100%;
+  }
+}
+
+.redes-sociales a {
+  font-size: 20px;
+  margin-right: 10px; 
+  color: #333; /
+}
+
+/* ... (estilos específicos para la sección de AFICIONADOS) ... */
+
+.aficionados {
+  margin: 4em 0;
+}
+
+.aficionados h1 {
+  font-size: var(--biggest-font-size);
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+.aficionados h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+.aficionado-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 1em;
+}
+
+.aficionado-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  width: 300px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+.aficionado-card .promotion {
+  background-color: #32c7e8;
+  color: rgb(0, 0, 0);
+  padding: 5px 10px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+
+.aficionado-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.aficionado-card .aficionado-advantages {
+  list-style: disc;
+  text-align: left;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.aficionado-card .aficionado-advantages li {
+  margin-bottom: 8px;
+}
+
+.aficionado-card .subscribe-btn {
+  width: 30%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #32c7e8;
+  color: #000000;
+  border: none;
+  cursor: pointer;
+  font-family: var(--body-font);
+  border-radius: 30px;
+}
+
+.aficionado-card .subscribe-btn:hover {
+  background-color: #000000;
+}
+
+@media (max-width: 606px) {
+  .aficionado-card {
+    width: 100%;
+  }
+}
+
+/* ... (estilos específicos para la sección de reseñas) ... */
+.testimonios {
+  margin: 1em 0;
+  padding: 2em 0;
+  background-color: #ffffff;
+}
+
+.testimonios h1 {
+  font-size: var(--biggest-font-size);
+  text-align: center;
+  color: #EC4A4A;
+}
+
+.testimonios h3 {
+  font-size: 1.5rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.testimonios-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 3em;
+}
+
+.card-testimonios {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+  border: 5px solid #EC4A4A;
+  border-radius: 90px;
+  background: #f5f2f2;
+
+}
+
+.card-testimonios img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 2em;
+}
+
+.card-testimonios h2 {
+  font-size: 18px;
+}
+
+.card-testimonios p {
+  margin-bottom: 10px;
+}
+
+.testimonios-footer {
+  float: right;
+  margin: 28px 0 0 18px;
+  font-size: 13px;
+  color: #636363;
+}
+
+.by-name {
+  font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .card-testimonios {
+    width: 100%;
+  }
+}
+
+.estrella {
+  color: gold; 
+  font-size: 20px;
+  margin-right: 5px; 
+}
+
+.calificacion {
+  margin-top: 10px; 
+  text-align: center; 
+}
+
+
+/* ... (estilos específicos para la sección de contacto) ... */
+
+.contacto {
+  display: flex;
+  align-items: center;
+  min-height: 71vh;
+  background: url(https://client-setting-co-institucional-images.s3.amazonaws.com/ventajas_de_electrodomesticos_inteligentes_e565e12431.webp)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.formulario_contacto {
+  width: 500px;
+  height: 600px;
+  display: flex;
+  top: 178px;
+  right: 5%;
+  position: relative;
+  flex-direction: column;
+  padding: 4vh;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+  justify-content: center;
+  margin-left: auto;
+}
+
+.tituloFormulario {
+  color: #4a4680;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  text-align: center;
+}
+
+.descripcionFormulario {
+  margin-bottom: 1em;
+}
+
+.input {
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  background-color: #e9e9f0;
+  margin-top: 10px;
+  font-family: var(--body-font);
+  color: #adabc3;
+}
+
+.btn_EnviarFormulario {
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  border-radius: 30px;
+  width: 90%;
+  margin: 10px auto;
+  background-color: #32c7e8;
+  color: #fff;
+  font-family: var(--body-font);
+}
+
+#nombre,
+#email {
+  height: 60px;
+  width: 100%;
+}
+
+#mensaje {
+  width: 100%;
+  height: 120px;
+  padding-top: 10px;
+}
+@media (max-width: 768px) {
+  .formulario_contacto {
+    width: 300px;
+    height: 400px;
+    top: 50%;
+    right: 23%;
+  }
+}
+@media (max-width: 1500px) {
+  .formulario_contacto {
+    width: 400px;
+    height: 500px;
+    top: 178px;
+    right: 5%;
+  }
+}
+@media (max-width: 1400px) {
+  .formulario_contacto {
+    top: 50%;
+    right: 15%;
+  }
+}
+
+/* Estilos para el pie de página */
+
+.hp_footer {
+  background-color: #1d1ae7;
+  min-height: 20vh;
+  display: flex;
+  color: black;
+}
+
+.hp_footer .tituloFooter {
+  color: rgb(255, 255, 255);
+  font-size: 1.9rem;
+  margin: 0.8rem 0;
+}
+
+.columna {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 4rem;
+  max-width: 500px;
+}
+
+/* BREAKPOINTS */
+@media screen and (max-width: 320px) {
+  .home {
+    padding-top: 7rem;
+  }
+}
+
+@media screen and (min-width: 767px) {
+  .nav {
+    height: calc(var(--header-height) + 1.5rem);
+  }
+
+  .nav__toggle,
+  .nav__close {
+    display: none;
+  }
+
+  .nav__list {
+    flex-direction: row;
+    column-gap: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 1048px) {
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 2048px) {
+  body {
+    zoom: 1.7;
+  }
+
+  .home {
+    height: initial;
+    row-gap: 4rem;
+  }
+}
+
+@media screen and (min-width: 3840px) {
+  body {
+    zoom: 3.1;
+  }
+}
