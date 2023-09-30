@@ -44,8 +44,8 @@ a {
 .nav__toggle {
   color: var(--text-color);
   display: inline-flex;
-  position: relative; 
-  left: -20px; 
+  position: relative;
+  left: -20px;
 }
 
 .nav__logo {
@@ -243,7 +243,7 @@ a {
 
 .redes-sociales a {
   font-size: 20px;
-  margin-right: 10px; 
+  margin-right: 10px;
   color: #333; /
 }
 
@@ -405,14 +405,14 @@ a {
 }
 
 .estrella {
-  color: gold; 
+  color: gold;
   font-size: 20px;
-  margin-right: 5px; 
+  margin-right: 5px;
 }
 
 .calificacion {
-  margin-top: 10px; 
-  text-align: center; 
+  margin-top: 10px;
+  text-align: center;
 }
 
 
@@ -540,10 +540,6 @@ a {
 }
 
 @media screen and (min-width: 767px) {
-  .nav {
-    height: calc(var(--header-height) + 1.5rem);
-  }
-
   .nav__toggle,
   .nav__close {
     display: none;
@@ -553,7 +549,24 @@ a {
     flex-direction: row;
     column-gap: 3.5rem;
   }
+
 }
+@media screen and (max-width: 767px) {
+  .top-bar nav ul {
+    flex-direction: column;
+    display: none; /* Oculta la lista en dispositivos pequeños por defecto */
+  }
+
+  .top-bar nav ul.show {
+    display: flex; /* Muestra la lista cuando se hace clic en el botón de hamburguesa */
+  }
+
+  /* Estilo para el botón de hamburguesa */
+  .nav__toggle {
+    display: inline-flex;
+  }
+}
+
 
 @media screen and (min-width: 1048px) {
   .container {
