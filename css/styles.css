@@ -116,7 +116,7 @@ a {
 
 .home {
   position: relative;
-  min-height: 100vh;
+  min-height: 50vh;
   background: url(https://us.123rf.com/450wm/viperagp/viperagp1707/viperagp170700073/82066961-conjunto-de-electrodom%C3%A9sticos-en-un-tel%C3%A9fono-inteligente-fondo-blanco-3d-ilustraci%C3%B3n.jpg?ver=6)
     no-repeat;
   background-size: cover;
@@ -219,7 +219,7 @@ a {
 
 .nosotros-card img {
   width: 150px;
-  height: auto;
+  height: 150px;
   margin-bottom: 10px;
   border-radius: 50%;
 }
@@ -591,5 +591,56 @@ a {
 @media screen and (min-width: 3840px) {
   body {
     zoom: 3.1;
+  }
+}
+/* Estilos para la sección de servicios */
+.servicios {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.servicios h2 {
+  font-size: 24px;
+  color: #333;
+}
+
+.servicios p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.imagenes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.imagen {
+  flex: 0 0 calc(33.33% - 20px);
+  text-align: center;
+}
+
+.imagen img {
+  max-width: 100%;
+  height: 600px;
+}
+
+.imagen p {
+  font-size: 14px;
+  color: #888;
+}
+
+@media (max-width: 768px) {
+  .imagen {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .imagen {
+    flex: 0 0 calc(100% - 20px);
   }
 }
