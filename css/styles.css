@@ -644,3 +644,33 @@ a {
     flex: 0 0 calc(100% - 20px);
   }
 }
+/* VIDEOS */
+.videos {
+  background-color: #f4f4f4;
+  padding: 50px 0;
+}
+
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.video-item {
+  width: 100%; /* Ocupa todo el ancho en dispositivos pequeños */
+  max-width: 500px; /* Ancho máximo en dispositivos más grandes */
+  margin-bottom: 20px;
+}
+
+.video-item iframe {
+  width: 100%; /* Para ocupar todo el contenedor */
+  height: 315px; /* Establece una altura fija */
+  border: 0;
+}
+
+.video-item h3 {
+  margin-top: 10px;
+  text-align: center;
+}
